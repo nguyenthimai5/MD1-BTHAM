@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chuyển đổi giữa feet và meters</h1>
+<table width="300px">
+    <tr>
+        <th></th>
+        <th>From</th>
+        <th>To</th>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input id="amount" type="text" placeholder="Enter the length"></td>
+        <td>
+            <select id="select1" onchange="changeLength()">
+                <option value="Feet">Feet</option>
+                <option value="Meters">Meters</option>
+            </select>
+        </td>
+        <td>
+            <select id="select2" onchange="changeLength()">
+                <option value="Meters">Meters</option>
+                <option value="Feet">Feet</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="changeLength()">Convert</button>
+        </td>
+    </tr>
+</table>
+<p id="result" ></p>
+<script>
+    function changeLength() {
+        let amount = +document.getElementById('amount').value;
+        console.log('amount',amount)
+        let select1 = document.getElementById('select1').value;
+        console.log('select1',select1)
+        let select2 = document.getElementById('select2').value;
+        console.log('select2',select2)
+        let result= 0.305*amount;
+        if (select1==='Feet') {
+            document.getElementById('select2').value = 'Meters'
+            document.getElementById('result').innerText=result;
+        } else {
+            document.getElementById('select2').value = 'Feet'
+            document.getElementById('result').innerText= 3.279*amount;
+        }
+    }
+</script>
+</body>
+</html>

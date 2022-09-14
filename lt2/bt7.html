@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>thực hiện đổi chỗ hai số nguyên
+</h3>
+Số a:<input id="tinh1" type="text"><br>
+Số b:<input id="tinh2" type="text"><br>
+<button onclick="check()">Tính</button>
+<p id="hienRa1"></p>
+<p id="hienRa2"></p>
+<script>
+    function check() {
+        let a=+document.getElementById('tinh1').value
+        let b=+document.getElementById('tinh2').value
+        // b=(function (a) {return a})(a,a=b)
+        document.getElementById('hienRa1').innerHTML='sau khi đổi a='+b+"<br>"
+        document.getElementById('hienRa2').innerHTML='sau khi đổi b='+a
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Nhập 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+</h3>
+Số a:<input id="tinh1" type="text"><br>
+Số b:<input id="tinh2" type="text"><br>
+Số c:<input id="tinh3" type="text"><br>
+<button onclick="check()">Tính</button>
+<p id="hienRa1"></p>
+<script>
+    function check() {
+        let a=+document.getElementById('tinh1').value;
+        // console.log('aa-----',a)
+        let b=+document.getElementById('tinh2').value;
+        // console.log('b--------',b)
+        let c=+document.getElementById('tinh3').value;
+        // console.log('c-----',c)
+        if (a<b){
+            if (a<c){
+                document.getElementById('hienRa1').innerHTML="min="+a
+            }else {
+                document.getElementById('hienRa1').innerHTML="min="+c
+            }
+        }else if (b<a){
+            if (b<c){
+                document.getElementById('hienRa1').innerHTML="min="+b
+            }else {
+                document.getElementById('hienRa1').innerHTML="min="+c
+            }
+
+        }
+    }
+
+
+</script>
+</body>
+</html>

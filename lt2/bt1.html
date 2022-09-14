@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Tính bình phương của một số</h2>
+<input id="tinhBinhPhuong" type="text">
+<button onclick="check()">Tính</button>
+<p id="hienRa"></p>
+<script>
+function check() {
+    let n= +document.getElementById('tinhBinhPhuong').value;
+    var  value=Math.pow(n,2);
+    document.getElementById('hienRa').innerHTML=`bình phương của ${n} là:`+value
+}
+
+</script>
+</body>
+</html>

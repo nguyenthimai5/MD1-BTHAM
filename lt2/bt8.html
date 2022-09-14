@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Đảo ngược mảng số nguyên</h2>
+<button onclick="check()">Tính</button>
+<p id="hienRa1"></p>
+<script>
+    let arr=[];
+    function check() {
+       let n=+prompt(" moi nhap so phan tu mang")
+        for (let i = 0; i <n ; i++) {
+            let b=+prompt(`phan tu thu ${i+1}`)
+            arr.push(b)
+            console.log(arr)
+        }
+        document.write("mảng ban đầu là:"+arr+"<br>")
+        document.write("mảng sau khi đảo ngược là: "+arr.reverse())
+    }
+</script>
+</body>
+</html>

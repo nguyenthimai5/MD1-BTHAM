@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Check xem gtr nhập vào có phải số không</h2>
+<input id="tinh" type="text">
+<button onclick="check()">Tính</button>
+<p id="hienRa1"></p>
+<p id="hienRa2"></p>
+<script>
+  function check() {
+    var number=+document.getElementById('tinh').value;
+    if (isNaN(number)){
+      document.getElementById('hienRa1').innerHTML=`${number} không phải dạng số`
+    }else {
+      document.getElementById('hienRa1').innerHTML=`${number} là dạng số`
+    }
+  }
+</script>
+</body>
+</html>

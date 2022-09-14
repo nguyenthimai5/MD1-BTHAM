@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Tính giai thừa của một số</h2>
+<input id="tinh" type="text">
+<button onclick="check()">Tính</button>
+<p id="hienRa1"></p>
+<p id="hienRa2"></p>
+<script>
+
+  function check() {
+      let n = +document.getElementById('tinh').value;
+      let result = 1;
+      if (n > 1) {
+          for (let i = 1; i <= n; i++) {
+              result = result * i;
+          }
+          document.getElementById('hienRa1').innerHTML=`giai thừa của ${n}! là` + result
+      } else if (n == 1) {
+          document.getElementById('hienRa1').innerHTML=`giai thừa của ${n}! là` + "1"
+      } else
+          if (n == 0) {
+              document.getElementById('hienRa1').innerHTML=`giai thừa của ${n}! là` + "1"
+          } else {
+              document.getElementById('hienRa1').innerHTML="số này không có giai thừa"
+          }
+
+  }
+</script>
+</body>
+</html>

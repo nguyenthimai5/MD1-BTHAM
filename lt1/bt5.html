@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let ngoiSao= [ "Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus" ,"Mai"]
+  let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" ,"Leo" ,"TAE HYUNG"]
+
+  function vuTru() {
+    let nhapSao = prompt('mời nhập vào chòm sao cần tìm ')
+    for (let i = 0; i <ngoiSao.length;i++) {
+      if (ngoiSao[i] == nhapSao)
+        return i;
+    }
+    return -1;
+  }
+  function transLate() {
+    let i = vuTru();
+    if (i == -1) {
+      alert("chòm sao này không có trong dữ liệu ")
+    } else {
+      alert(ngoiSao[i]+' nằm trong chòm sao: ' + chomSao[i])
+    }
+  }
+  transLate();
+
+</script>
+
+</body>
+</html>

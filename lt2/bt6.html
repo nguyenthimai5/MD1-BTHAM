@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Kiểm tra xem nếu số đưa vào có phải là nguyên dương không</h2>
+<input id="tinh" type="text">
+<button onclick="check()">Tính</button>
+<p id="hienRa1"></p>
+<script>
+    function check() {
+        let n=+document.getElementById('tinh').value;
+        if (n>=0&& Number.isInteger(n)){
+            document.getElementById('hienRa1').innerHTML=true
+        }else {
+            document.getElementById('hienRa1').innerHTML=false
+        }
+    }
+
+</script>
+</body>
+</html>
